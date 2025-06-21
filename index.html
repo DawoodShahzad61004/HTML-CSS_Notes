@@ -400,6 +400,132 @@
         </div>
     </div>
 
+    <div class="grid-css-container">
+        <h2 class="header">Interactive CSS Grid Explorer</h2>
+
+        <div class="content">
+            <div class="controls-panel">
+                <div class="control-group">
+                    <h3>📐 Grid Template Columns</h3>
+                    <div class="button-group">
+                        <button class="btn active" onclick="setGridColumns('repeat(3, 1fr)')">3 Equal</button>
+                        <button class="btn" onclick="setGridColumns('1fr 2fr 1fr')">1:2:1 Ratio</button>
+                        <button class="btn" onclick="setGridColumns('200px 1fr 100px')">Fixed + Flex</button>
+                        <button class="btn" onclick="setGridColumns('repeat(4, 1fr)')">4 Equal</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>📏 Grid Template Rows</h3>
+                    <div class="button-group">
+                        <button class="btn active" onclick="setGridRows('repeat(3, 100px)')">3 x 100px</button>
+                        <button class="btn" onclick="setGridRows('100px 200px 100px')">Varied Heights</button>
+                        <button class="btn" onclick="setGridRows('repeat(2, 1fr)')">2 Equal Flex</button>
+                        <button class="btn" onclick="setGridRows('auto auto auto')">Auto Height</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>🎯 Gap</h3>
+                    <div class="button-group">
+                        <button class="btn active" onclick="setGap('10px')">10px</button>
+                        <button class="btn" onclick="setGap('20px')">20px</button>
+                        <button class="btn" onclick="setGap('5px 20px')">5px | 20px</button>
+                        <button class="btn" onclick="setGap('0')">No Gap</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>📍 Justify Content</h3>
+                    <div class="button-group">
+                        <button class="btn" onclick="setJustifyContent('start')">Start</button>
+                        <button class="btn" onclick="setJustifyContent('center')">Center</button>
+                        <button class="btn" onclick="setJustifyContent('end')">End</button>
+                        <button class="btn" onclick="setJustifyContent('space-between')">Space Between</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>⬆️ Align Content</h3>
+                    <div class="button-group">
+                        <button class="btn" onclick="setAlignContent('start')">Start</button>
+                        <button class="btn" onclick="setAlignContent('center')">Center</button>
+                        <button class="btn" onclick="setAlignContent('end')">End</button>
+                        <button class="btn" onclick="setAlignContent('space-around')">Space Around</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>🔄 Reset & Examples</h3>
+                    <div class="button-group">
+                        <button class="btn" onclick="resetGrid()">Reset Default</button>
+                        <button class="btn" onclick="showGridLines()">Toggle Grid Lines</button>
+                        <button class="btn" onclick="createComplexLayout()">Complex Layout</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-area">
+                <div class="grid-demo" id="gridDemo">
+                    <div class="grid-item">Item 1</div>
+                    <div class="grid-item">Item 2</div>
+                    <div class="grid-item">Item 3</div>
+                    <div class="grid-item">Item 4</div>
+                    <div class="grid-item">Item 5</div>
+                    <div class="grid-item">Item 6</div>
+                    <div class="grid-item">Item 7</div>
+                    <div class="grid-item">Item 8</div>
+                    <div class="grid-item">Item 9</div>
+                </div>
+
+                <div class="info-panel">
+                    <h4>📋 Current CSS Code:</h4>
+                    <div class="code-display" id="codeDisplay">
+                        <span class="highlight">display:</span> grid;<br>
+                        <span class="highlight">grid-template-columns:</span> repeat(3, 1fr);<br>
+                        <span class="highlight">grid-template-rows:</span> repeat(3, 100px);<br>
+                        <span class="highlight">gap:</span> 10px;
+                    </div>
+                </div>
+
+                <div class="terminology">
+                    <h3>📚 CSS Grid Terminology</h3>
+                    <div class="term-diagram">
+                        <div class="term-label grid-container-label">Grid Container</div>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 20px;">
+                            <div
+                                style="background: rgba(116, 185, 255, 0.3); padding: 15px; border-radius: 5px; text-align: center; position: relative;">
+                                <strong>Grid Item</strong>
+                                <div
+                                    style="position: absolute; top: -8px; right: -8px; background: #ff6b6b; color: white; padding: 2px 6px; border-radius: 10px; font-size: 0.7em;">
+                                    Cell</div>
+                            </div>
+                            <div
+                                style="background: rgba(116, 185, 255, 0.3); padding: 15px; border-radius: 5px; text-align: center;">
+                                Grid Item</div>
+                            <div
+                                style="background: rgba(116, 185, 255, 0.3); padding: 15px; border-radius: 5px; text-align: center;">
+                                Grid Item</div>
+                        </div>
+                        <div
+                            style="margin-top: 15px; padding: 10px; background: rgba(255, 235, 59, 0.2); border-radius: 5px;">
+                            <strong>Key Terms:</strong>
+                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                <li><strong>Grid Container:</strong> Parent element with display: grid</li>
+                                <li><strong>Grid Items:</strong> Direct children of the grid container</li>
+                                <li><strong>Grid Lines:</strong> Dividing lines that create the structure</li>
+                                <li><strong>Grid Tracks:</strong> Space between two adjacent grid lines
+                                    (rows/columns)</li>
+                                <li><strong>Grid Cell:</strong> Single unit of the grid</li>
+                                <li><strong>Grid Area:</strong> Rectangular area occupied by one or more cells</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="index.js"></script>
 </body>
 
