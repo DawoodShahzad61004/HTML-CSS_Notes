@@ -1,254 +1,406 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced CSS Visual Diagrams</title>
-    
+
     <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>CSS Visual Diagrams</h1>
+    <div class="gen-css-container">
+        <h2 class="gen-css-heading">CSS Visual Diagrams</h1>
 
-        <!-- 1. Centering Content -->
-        <div class="diagram-section">
-            <div class="diagram-title">1. Centering Content Horizontally</div>
-            <div class="centering-demo">
-                <div class="centered-content">
-                    Centered Content (width: 50%, margin-left: 25%)
-                </div>
-                <div class="centering-labels">
-                    <span>25% margin</span>
-                    <span>50% width</span>
-                    <span>25% margin</span>
+            <!-- 1. Centering Content -->
+            <div class="diagram-section">
+                <div class="diagram-title">1. Centering Content Horizontally</div>
+                <div class="centering-demo">
+                    <div class="centered-content">
+                        Centered Content (width: 50%, margin-left: 25%)
+                    </div>
+                    <div class="centering-labels">
+                        <span>25% margin</span>
+                        <span>50% width</span>
+                        <span>25% margin</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 2. Box Model Interactive -->
-        <div class="diagram-section">
-            <div class="diagram-title">2. Interactive Box Model</div>
-            
-            <div class="controls-group">
-                <div class="controls-title">Box Model Controls:</div>
-                <div class="slider-container">
-                    <label>Margin: <span class="value-display" id="margin-value">15px</span></label>
-                    <input type="range" min="0" max="50" value="15" class="slider" id="margin-slider" oninput="updateBoxModel('margin', this.value, 'margin-value')">
-                </div>
-                <div class="slider-container">
-                    <label>Border Width: <span class="value-display" id="border-value">3px</span></label>
-                    <input type="range" min="0" max="20" value="3" class="slider" id="border-slider" oninput="updateBoxModel('border', this.value, 'border-value')">
-                </div>
-                <div class="slider-container">
-                    <label>Padding: <span class="value-display" id="padding-value">15px</span></label>
-                    <input type="range" min="0" max="50" value="15" class="slider" id="padding-slider" oninput="updateBoxModel('padding', this.value, 'padding-value')">
-                </div>
-                <button class="interactive-btn" onclick="resetBoxModel()">Reset Box Model</button>
-            </div>
+            <!-- 2. Box Model Interactive -->
+            <div class="diagram-section">
+                <div class="diagram-title">2. Interactive Box Model</div>
 
-            <div class="box-model">
-                <div class="box-layer margin-layer" id="interactive-margin">
-                    Margin
-                    <div class="box-layer border-layer" id="interactive-border">
-                        Border
-                        <div class="box-layer padding-layer" id="interactive-padding">
-                            Padding
-                            <div class="content-layer" id="interactive-content">
-                                Content<br>(width × height)
+                <div class="controls-group">
+                    <div class="controls-title">Box Model Controls:</div>
+                    <div class="slider-container">
+                        <label>Margin: <span class="value-display" id="margin-value">15px</span></label>
+                        <input type="range" min="0" max="50" value="15" class="slider" id="margin-slider"
+                            oninput="updateBoxModel('margin', this.value, 'margin-value')">
+                    </div>
+                    <div class="slider-container">
+                        <label>Border Width: <span class="value-display" id="border-value">3px</span></label>
+                        <input type="range" min="0" max="20" value="3" class="slider" id="border-slider"
+                            oninput="updateBoxModel('border', this.value, 'border-value')">
+                    </div>
+                    <div class="slider-container">
+                        <label>Padding: <span class="value-display" id="padding-value">15px</span></label>
+                        <input type="range" min="0" max="50" value="15" class="slider" id="padding-slider"
+                            oninput="updateBoxModel('padding', this.value, 'padding-value')">
+                    </div>
+                    <button class="interactive-btn" onclick="resetBoxModel()">Reset Box Model</button>
+                </div>
+
+                <div class="box-model">
+                    <div class="box-layer margin-layer" id="interactive-margin">
+                        Margin
+                        <div class="box-layer border-layer" id="interactive-border">
+                            Border
+                            <div class="box-layer padding-layer" id="interactive-padding">
+                                Padding
+                                <div class="content-layer" id="interactive-content">
+                                    Content<br>(width × height)
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 3. CSS Specificity -->
+            <div class="diagram-section">
+                <div class="diagram-title">3. CSS Specificity Hierarchy</div>
+                <div class="specificity-pyramid">
+                    <div class="specificity-level spec-important">!important (Highest Priority)</div>
+                    <div class="specificity-level spec-inline">Inline Styles</div>
+                    <div class="specificity-level spec-id">IDs (#id)</div>
+                    <div class="specificity-level spec-class">Classes (.class), Attributes, Pseudo-classes</div>
+                    <div class="specificity-level spec-element">Elements (div, p, h1...)</div>
+                </div>
+            </div>
+
+            <!-- 4. CSS Positioning -->
+            <div class="diagram-section">
+                <div class="diagram-title">4. CSS Positioning Types</div>
+                <div class="positioning-demo">
+                    <div class="pos-static">Static (Default)</div>
+                    <div class="pos-relative">Relative (offset from normal position)</div>
+                    <div class="pos-absolute">Absolute (relative to parent)</div>
+                </div>
+                <div class="pos-fixed">Fixed (relative to viewport)</div>
+            </div>
+
+            <!-- 5. Display Properties -->
+            <div class="diagram-section">
+                <div class="diagram-title">5. CSS Display Properties</div>
+                <div class="display-demo">
+                    <div class="display-block">Block Element 1</div>
+                    <div class="display-block">Block Element 2</div>
+                    <div style="margin: 10px 0;">
+                        <span class="display-inline">Inline 1</span>
+                        <span class="display-inline">Inline 2</span>
+                        <span class="display-inline">Inline 3</span>
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <span class="display-inline-block">Inline-Block 1</span>
+                        <span class="display-inline-block">Inline-Block 2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Float Property -->
+            <div class="diagram-section">
+                <div class="diagram-title">6. CSS Float Property - Interactive</div>
+
+                <div class="controls-group">
+                    <div class="controls-title">Float Controls:</div>
+                    <button class="interactive-btn" onclick="setFloat('element1', 'left')">Float Element 1 Left</button>
+                    <button class="interactive-btn" onclick="setFloat('element1', 'right')">Float Element 1
+                        Right</button>
+                    <button class="interactive-btn" onclick="setFloat('element1', 'none')">Element 1 No Float</button>
+                    <br>
+                    <button class="interactive-btn" onclick="setFloat('element2', 'left')">Float Element 2 Left</button>
+                    <button class="interactive-btn" onclick="setFloat('element2', 'right')">Float Element 2
+                        Right</button>
+                    <button class="interactive-btn" onclick="setFloat('element2', 'none')">Element 2 No Float</button>
+                    <br>
+                    <button class="interactive-btn" onclick="toggleClear()">Toggle Clear</button>
+                    <button class="interactive-btn" onclick="resetFloat()">Reset Float Demo</button>
+                </div>
+
+                <div class="float-demo" id="float-container">
+                    <div class="float-element float-left" id="element1" draggable="true">Element 1</div>
+                    <div class="float-element float-right" id="element2" draggable="true">Element 2</div>
+                    <div class="float-text">
+                        This text demonstrates how content flows around floated elements. Try changing the float
+                        properties above to see how the layout changes. Floated elements are removed from the normal
+                        document flow.
+                    </div>
+                    <div class="clear-both" id="clear-element" style="display: none;">Clear: Both (Stops wrapping)</div>
+                </div>
+            </div>
+
+            <!-- 7. Z-Index Stacking -->
+            <div class="diagram-section">
+                <div class="diagram-title">7. Z-Index Stacking Context - Interactive</div>
+
+                <div class="controls-group">
+                    <div class="controls-title">Z-Index Controls:</div>
+                    <div class="slider-container">
+                        <label>Green Layer Z-Index: <span class="value-display" id="z1-value">1</span></label>
+                        <input type="range" min="-5" max="10" value="1" class="slider" id="z1-slider"
+                            oninput="updateZIndex('z-back', this.value, 'z1-value')">
+                    </div>
+                    <div class="slider-container">
+                        <label>Orange Layer Z-Index: <span class="value-display" id="z2-value">2</span></label>
+                        <input type="range" min="-5" max="10" value="2" class="slider" id="z2-slider"
+                            oninput="updateZIndex('z-middle', this.value, 'z2-value')">
+                    </div>
+                    <div class="slider-container">
+                        <label>Red Layer Z-Index: <span class="value-display" id="z3-value">3</span></label>
+                        <input type="range" min="-5" max="10" value="3" class="slider" id="z3-slider"
+                            oninput="updateZIndex('z-front', this.value, 'z3-value')">
+                    </div>
+                    <button class="interactive-btn" onclick="randomizeZIndex()">Randomize Z-Index</button>
+                    <button class="interactive-btn" onclick="resetZIndex()">Reset Z-Index</button>
+                </div>
+
+                <div class="z-index-demo" id="z-container">
+                    <div class="z-layer z-back interactive-element" id="z-back" draggable="true">
+                        Z-Index: <span id="z-back-text">1</span> (Green)
+                    </div>
+                    <div class="z-layer z-middle interactive-element" id="z-middle" draggable="true">
+                        Z-Index: <span id="z-middle-text">2</span> (Orange)
+                    </div>
+                    <div class="z-layer z-front interactive-element" id="z-front" draggable="true">
+                        Z-Index: <span id="z-front-text">3</span> (Red)
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Enhanced Interactive Demo -->
+            <div class="diagram-section">
+                <div class="diagram-title">8. Advanced Interactive Demo</div>
+
+                <div class="controls-group">
+                    <div class="controls-title">Position & Display Controls:</div>
+                    <button class="interactive-btn" onclick="changePosition('static')">Static</button>
+                    <button class="interactive-btn" onclick="changePosition('relative')">Relative</button>
+                    <button class="interactive-btn" onclick="changePosition('absolute')">Absolute</button>
+                    <button class="interactive-btn" onclick="changePosition('fixed')">Fixed</button>
+                    <br>
+                    <button class="interactive-btn" onclick="changeDisplay('block')">Block</button>
+                    <button class="interactive-btn" onclick="changeDisplay('inline-block')">Inline-Block</button>
+                    <button class="interactive-btn" onclick="changeDisplay('inline')">Inline</button>
+                    <button class="interactive-btn" onclick="changeDisplay('none')">Hide</button>
+                </div>
+
+                <div class="controls-group">
+                    <div class="controls-title">Transform Controls:</div>
+                    <div class="slider-container">
+                        <label>Rotation: <span class="value-display" id="rotation-value">0°</span></label>
+                        <input type="range" min="0" max="360" value="0" class="slider" id="rotation-slider"
+                            oninput="updateTransform('rotate', this.value, 'rotation-value')">
+                    </div>
+                    <div class="slider-container">
+                        <label>Scale: <span class="value-display" id="scale-value">1</span></label>
+                        <input type="range" min="0.5" max="3" step="0.1" value="1" class="slider" id="scale-slider"
+                            oninput="updateTransform('scale', this.value, 'scale-value')">
+                    </div>
+                    <div class="slider-container">
+                        <label>Opacity: <span class="value-display" id="opacity-value">100%</span></label>
+                        <input type="range" min="0" max="100" value="100" class="slider" id="opacity-slider"
+                            oninput="updateTransform('opacity', this.value, 'opacity-value')">
+                    </div>
+                </div>
+
+                <div class="controls-group">
+                    <div class="controls-title">Color & Style Controls:</div>
+                    <label>Background Color:
+                        <input type="color" value="#4caf50" onchange="changeColor('background', this.value)">
+                    </label>
+                    <label>Text Color:
+                        <input type="color" value="#ffffff" onchange="changeColor('text', this.value)">
+                    </label>
+                    <label>Border Color:
+                        <input type="color" value="#2e7d32" onchange="changeColor('border', this.value)">
+                    </label>
+                    <br>
+                    <button class="interactive-btn" onclick="applyAnimation('bounce')">Bounce</button>
+                    <button class="interactive-btn" onclick="applyAnimation('spin')">Spin</button>
+                    <button class="interactive-btn" onclick="applyAnimation('pulse')">Pulse</button>
+                    <button class="interactive-btn" onclick="applyAnimation('fade')">Fade</button>
+                </div>
+
+                <div id="interactive-demo"
+                    style="background: #f5f5f5; padding: 20px; border-radius: 10px; min-height: 150px; position: relative; border: 2px solid #ddd;">
+                    <div id="demo-element" class="interactive-element" draggable="true"
+                        style="background: #4caf50; color: white; padding: 20px; border-radius: 10px; width: 200px; transition: all 0.3s;">
+                        Demo Element<br><small>Drag me around!</small>
+                    </div>
+                </div>
+
+                <div class="controls-group">
+                    <div class="controls-title">Live CSS Display:</div>
+                    <div id="live-display"
+                        style="background: #e8f5e8; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 0.9em;">
+                        <strong>Live CSS Values:</strong><br>
+                        Position: static<br>
+                        Display: block<br>
+                        Z-Index: auto<br>
+                        Transform: none<br>
+                        Opacity: 1
+                    </div>
+                </div>
+
+                <div style="margin-top: 15px;">
+                    <button class="interactive-btn" onclick="resetElement()">Reset All</button>
+                    <button class="interactive-btn" onclick="randomizeElement()">Randomize</button>
+                    <small style="display: block; margin-top: 10px; color: #666;">
+                        💡 Keyboard Shortcuts: Ctrl+R (Reset), Ctrl+Z (Randomize Z-Index), Ctrl+F (Reset Float)
+                    </small>
+                </div>
+            </div>
+    </div>
+    <div class="particles" id="particles"></div>
+
+    <div class="sound-toggle" id="soundToggle" onclick="toggleSound()">🔊</div>
+
+    <div class="flexbox-container">
+        <h2 class="flexbox-heading">Interactive Flexbox Properties Demo</h2>
+
+        <div class="demo-section">
+            <div class="controls">
+                <h3>Container Properties</h3>
+
+                <div class="button-group">
+                    <label>flex-direction:</label>
+                    <button onclick="setFlexDirection('row')" class="active">row</button>
+                    <button onclick="setFlexDirection('row-reverse')">row-reverse</button>
+                    <button onclick="setFlexDirection('column')">column</button>
+                    <button onclick="setFlexDirection('column-reverse')">column-reverse</button>
+                </div>
+
+                <div class="button-group">
+                    <label>flex-wrap:</label>
+                    <button onclick="setFlexWrap('nowrap')" class="active">nowrap</button>
+                    <button onclick="setFlexWrap('wrap')">wrap</button>
+                    <button onclick="setFlexWrap('wrap-reverse')">wrap-reverse</button>
+                </div>
+
+                <div class="button-group">
+                    <label>justify-content:</label>
+                    <button onclick="setJustifyContent('flex-start')" class="active">flex-start</button>
+                    <button onclick="setJustifyContent('flex-end')">flex-end</button>
+                    <button onclick="setJustifyContent('center')">center</button>
+                    <button onclick="setJustifyContent('space-between')">space-between</button>
+                    <button onclick="setJustifyContent('space-around')">space-around</button>
+                    <button onclick="setJustifyContent('space-evenly')">space-evenly</button>
+                </div>
+
+                <div class="button-group">
+                    <label>align-items:</label>
+                    <button onclick="setAlignItems('stretch')" class="active">stretch</button>
+                    <button onclick="setAlignItems('flex-start')">flex-start</button>
+                    <button onclick="setAlignItems('flex-end')">flex-end</button>
+                    <button onclick="setAlignItems('center')">center</button>
+                    <button onclick="setAlignItems('baseline')">baseline</button>
+                </div>
+
+                <div class="button-group">
+                    <label>align-content:</label>
+                    <button onclick="setAlignContent('stretch')" class="active">stretch</button>
+                    <button onclick="setAlignContent('flex-start')">flex-start</button>
+                    <button onclick="setAlignContent('flex-end')">flex-end</button>
+                    <button onclick="setAlignContent('center')">center</button>
+                    <button onclick="setAlignContent('space-between')">space-between</button>
+                    <button onclick="setAlignContent('space-around')">space-around</button>
+                </div>
+
+                <div class="button-group">
+                    <label>gap:</label>
+                    <button onclick="setGap('0px')" class="active">0px</button>
+                    <button onclick="setGap('10px')">10px</button>
+                    <button onclick="setGap('20px')">20px</button>
+                    <button onclick="setGap('30px')">30px</button>
+                </div>
+
+                <div class="current-values" id="currentValues">
+                    flex-direction: row;<br>
+                    flex-wrap: nowrap;<br>
+                    justify-content: flex-start;<br>
+                    align-items: stretch;<br>
+                    align-content: stretch;<br>
+                    gap: 0px;
+                </div>
+
+                <div class="item-controls">
+                    <h4>Selected Item Controls</h4>
+                    <p style="font-size: 0.8rem; margin-bottom: 10px;">Click on an item to select it</p>
+
+                    <div class="range-control">
+                        <label>flex-grow: <span id="growValue">0</span></label>
+                        <input type="range" id="growRange" min="0" max="5" value="0" oninput="setFlexGrow(this.value)">
+                    </div>
+
+                    <div class="range-control">
+                        <label>flex-shrink: <span id="shrinkValue">1</span></label>
+                        <input type="range" id="shrinkRange" min="0" max="5" value="1"
+                            oninput="setFlexShrink(this.value)">
+                    </div>
+
+                    <div class="range-control">
+                        <label>flex-basis: <span id="basisValue">auto</span></label>
+                        <input type="range" id="basisRange" min="0" max="300" value="0"
+                            oninput="setFlexBasis(this.value)">
+                    </div>
+
+                    <div class="button-group">
+                        <label>align-self:</label>
+                        <button onclick="setAlignSelf('auto')" class="active align-self-btn">auto</button>
+                        <button onclick="setAlignSelf('flex-start')" class="align-self-btn">flex-start</button>
+                        <button onclick="setAlignSelf('flex-end')" class="align-self-btn">flex-end</button>
+                        <button onclick="setAlignSelf('center')" class="align-self-btn">center</button>
+                        <button onclick="setAlignSelf('stretch')" class="align-self-btn">stretch</button>
+                    </div>
+
+                    <div class="button-group">
+                        <label>order:</label>
+                        <div class="order-controls">
+                            <button onclick="setOrder(-2)" class="order-btn">-2</button>
+                            <button onclick="setOrder(-1)" class="order-btn">-1</button>
+                            <button onclick="setOrder(0)" class="order-btn active">0</button>
+                            <button onclick="setOrder(1)" class="order-btn">1</button>
+                            <button onclick="setOrder(2)" class="order-btn">2</button>
+                            <button onclick="setOrder(3)" class="order-btn">3</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex-container" id="flexContainer">
+                    <div class="flex-item" onclick="selectItem(this)" data-item="1">Item 1</div>
+                    <div class="flex-item" onclick="selectItem(this)" data-item="2">Item 2</div>
+                    <div class="flex-item" onclick="selectItem(this)" data-item="3">Item 3</div>
+                    <div class="flex-item" onclick="selectItem(this)" data-item="4">Item 4</div>
+                    <div class="flex-item" onclick="selectItem(this)" data-item="5">Item 5</div>
+                </div>
+            </div>
         </div>
 
-        <!-- 3. CSS Specificity -->
-        <div class="diagram-section">
-            <div class="diagram-title">3. CSS Specificity Hierarchy</div>
-            <div class="specificity-pyramid">
-                <div class="specificity-level spec-important">!important (Highest Priority)</div>
-                <div class="specificity-level spec-inline">Inline Styles</div>
-                <div class="specificity-level spec-id">IDs (#id)</div>
-                <div class="specificity-level spec-class">Classes (.class), Attributes, Pseudo-classes</div>
-                <div class="specificity-level spec-element">Elements (div, p, h1...)</div>
-            </div>
-        </div>
-
-        <!-- 4. CSS Positioning -->
-        <div class="diagram-section">
-            <div class="diagram-title">4. CSS Positioning Types</div>
-            <div class="positioning-demo">
-                <div class="pos-static">Static (Default)</div>
-                <div class="pos-relative">Relative (offset from normal position)</div>
-                <div class="pos-absolute">Absolute (relative to parent)</div>
-            </div>
-            <div class="pos-fixed">Fixed (relative to viewport)</div>
-        </div>
-
-        <!-- 5. Display Properties -->
-        <div class="diagram-section">
-            <div class="diagram-title">5. CSS Display Properties</div>
-            <div class="display-demo">
-                <div class="display-block">Block Element 1</div>
-                <div class="display-block">Block Element 2</div>
-                <div style="margin: 10px 0;">
-                    <span class="display-inline">Inline 1</span>
-                    <span class="display-inline">Inline 2</span>
-                    <span class="display-inline">Inline 3</span>
-                </div>
-                <div style="margin: 10px 0;">
-                    <span class="display-inline-block">Inline-Block 1</span>
-                    <span class="display-inline-block">Inline-Block 2</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- 6. Float Property -->
-        <div class="diagram-section">
-            <div class="diagram-title">6. CSS Float Property - Interactive</div>
-            
-            <div class="controls-group">
-                <div class="controls-title">Float Controls:</div>
-                <button class="interactive-btn" onclick="setFloat('element1', 'left')">Float Element 1 Left</button>
-                <button class="interactive-btn" onclick="setFloat('element1', 'right')">Float Element 1 Right</button>
-                <button class="interactive-btn" onclick="setFloat('element1', 'none')">Element 1 No Float</button>
-                <br>
-                <button class="interactive-btn" onclick="setFloat('element2', 'left')">Float Element 2 Left</button>
-                <button class="interactive-btn" onclick="setFloat('element2', 'right')">Float Element 2 Right</button>
-                <button class="interactive-btn" onclick="setFloat('element2', 'none')">Element 2 No Float</button>
-                <br>
-                <button class="interactive-btn" onclick="toggleClear()">Toggle Clear</button>
-                <button class="interactive-btn" onclick="resetFloat()">Reset Float Demo</button>
-            </div>
-
-            <div class="float-demo" id="float-container">
-                <div class="float-element float-left" id="element1" draggable="true">Element 1</div>
-                <div class="float-element float-right" id="element2" draggable="true">Element 2</div>
-                <div class="float-text">
-                    This text demonstrates how content flows around floated elements. Try changing the float properties above to see how the layout changes. Floated elements are removed from the normal document flow.
-                </div>
-                <div class="clear-both" id="clear-element" style="display: none;">Clear: Both (Stops wrapping)</div>
-            </div>
-        </div>
-
-        <!-- 7. Z-Index Stacking -->
-        <div class="diagram-section">
-            <div class="diagram-title">7. Z-Index Stacking Context - Interactive</div>
-            
-            <div class="controls-group">
-                <div class="controls-title">Z-Index Controls:</div>
-                <div class="slider-container">
-                    <label>Green Layer Z-Index: <span class="value-display" id="z1-value">1</span></label>
-                    <input type="range" min="-5" max="10" value="1" class="slider" id="z1-slider" oninput="updateZIndex('z-back', this.value, 'z1-value')">
-                </div>
-                <div class="slider-container">
-                    <label>Orange Layer Z-Index: <span class="value-display" id="z2-value">2</span></label>
-                    <input type="range" min="-5" max="10" value="2" class="slider" id="z2-slider" oninput="updateZIndex('z-middle', this.value, 'z2-value')">
-                </div>
-                <div class="slider-container">
-                    <label>Red Layer Z-Index: <span class="value-display" id="z3-value">3</span></label>
-                    <input type="range" min="-5" max="10" value="3" class="slider" id="z3-slider" oninput="updateZIndex('z-front', this.value, 'z3-value')">
-                </div>
-                <button class="interactive-btn" onclick="randomizeZIndex()">Randomize Z-Index</button>
-                <button class="interactive-btn" onclick="resetZIndex()">Reset Z-Index</button>
-            </div>
-
-            <div class="z-index-demo" id="z-container">
-                <div class="z-layer z-back interactive-element" id="z-back" draggable="true">
-                    Z-Index: <span id="z-back-text">1</span> (Green)
-                </div>
-                <div class="z-layer z-middle interactive-element" id="z-middle" draggable="true">
-                    Z-Index: <span id="z-middle-text">2</span> (Orange)
-                </div>
-                <div class="z-layer z-front interactive-element" id="z-front" draggable="true">
-                    Z-Index: <span id="z-front-text">3</span> (Red)
-                </div>
-            </div>
-        </div>
-
-        
-
-        <!-- Enhanced Interactive Demo -->
-        <div class="diagram-section">
-            <div class="diagram-title">8. Advanced Interactive Demo</div>
-            
-            <div class="controls-group">
-                <div class="controls-title">Position & Display Controls:</div>
-                <button class="interactive-btn" onclick="changePosition('static')">Static</button>
-                <button class="interactive-btn" onclick="changePosition('relative')">Relative</button>
-                <button class="interactive-btn" onclick="changePosition('absolute')">Absolute</button>
-                <button class="interactive-btn" onclick="changePosition('fixed')">Fixed</button>
-                <br>
-                <button class="interactive-btn" onclick="changeDisplay('block')">Block</button>
-                <button class="interactive-btn" onclick="changeDisplay('inline-block')">Inline-Block</button>
-                <button class="interactive-btn" onclick="changeDisplay('inline')">Inline</button>
-                <button class="interactive-btn" onclick="changeDisplay('none')">Hide</button>
-            </div>
-
-            <div class="controls-group">
-                <div class="controls-title">Transform Controls:</div>
-                <div class="slider-container">
-                    <label>Rotation: <span class="value-display" id="rotation-value">0°</span></label>
-                    <input type="range" min="0" max="360" value="0" class="slider" id="rotation-slider" oninput="updateTransform('rotate', this.value, 'rotation-value')">
-                </div>
-                <div class="slider-container">
-                    <label>Scale: <span class="value-display" id="scale-value">1</span></label>
-                    <input type="range" min="0.5" max="3" step="0.1" value="1" class="slider" id="scale-slider" oninput="updateTransform('scale', this.value, 'scale-value')">
-                </div>
-                <div class="slider-container">
-                    <label>Opacity: <span class="value-display" id="opacity-value">100%</span></label>
-                    <input type="range" min="0" max="100" value="100" class="slider" id="opacity-slider" oninput="updateTransform('opacity', this.value, 'opacity-value')">
-                </div>
-            </div>
-
-            <div class="controls-group">
-                <div class="controls-title">Color & Style Controls:</div>
-                <label>Background Color: 
-                    <input type="color" value="#4caf50" onchange="changeColor('background', this.value)">
-                </label>
-                <label>Text Color: 
-                    <input type="color" value="#ffffff" onchange="changeColor('text', this.value)">
-                </label>
-                <label>Border Color: 
-                    <input type="color" value="#2e7d32" onchange="changeColor('border', this.value)">
-                </label>
-                <br>
-                <button class="interactive-btn" onclick="applyAnimation('bounce')">Bounce</button>
-                <button class="interactive-btn" onclick="applyAnimation('spin')">Spin</button>
-                <button class="interactive-btn" onclick="applyAnimation('pulse')">Pulse</button>
-                <button class="interactive-btn" onclick="applyAnimation('fade')">Fade</button>
-            </div>
-
-            <div id="interactive-demo" style="background: #f5f5f5; padding: 20px; border-radius: 10px; min-height: 150px; position: relative; border: 2px solid #ddd;">
-                <div id="demo-element" class="interactive-element" draggable="true" style="background: #4caf50; color: white; padding: 20px; border-radius: 10px; width: 200px; transition: all 0.3s;">
-                    Demo Element<br><small>Drag me around!</small>
-                </div>
-            </div>
-            
-            <div class="controls-group">
-                <div class="controls-title">Live CSS Display:</div>
-                <div id="live-display" style="background: #e8f5e8; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 0.9em;">
-                    <strong>Live CSS Values:</strong><br>
-                    Position: static<br>
-                    Display: block<br>
-                    Z-Index: auto<br>
-                    Transform: none<br>
-                    Opacity: 1
-                </div>
-            </div>
-            
-            <div style="margin-top: 15px;">
-                <button class="interactive-btn" onclick="resetElement()">Reset All</button>
-                <button class="interactive-btn" onclick="randomizeElement()">Randomize</button>
-                <small style="display: block; margin-top: 10px; color: #666;">
-                    💡 Keyboard Shortcuts: Ctrl+R (Reset), Ctrl+Z (Randomize Z-Index), Ctrl+F (Reset Float)
-                </small>
-            </div>
+        <div class="info-panel">
+            <h2>How to Use This Demo</h2>
+            <p>Click the buttons to change flexbox properties and see the effects in real-time. Click on any item to
+                select it and modify its individual properties like flex-grow, flex-shrink, flex-basis, align-self, and
+                order!</p>
         </div>
     </div>
 
-    
     <script src="index.js"></script>
 </body>
+
 </html>
